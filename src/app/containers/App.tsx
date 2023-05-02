@@ -15,6 +15,7 @@ export const App = (props) => {
       <Routes>
         <Route index path='/' />
         <Route path='/galaxias' element={<Galaxies />} />
+        <Route path='/apollo' element={<Galaxies />} />
       </Routes>
       <Footer />
     </>
