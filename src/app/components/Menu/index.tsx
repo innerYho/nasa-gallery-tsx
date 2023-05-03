@@ -28,9 +28,9 @@ export const Menu = () => {
                     <li>
                         <a href="/galaxias" onClick={closeMenu}>Galaxias</a>
                     </li>
-                    <li>
+                    {/* <li>
                         <a href="/apollo" onClick={closeMenu}>Apollo</a>
-                    </li>
+                    </li> */}
                 </ul>
             </MenuContainer>
         </>

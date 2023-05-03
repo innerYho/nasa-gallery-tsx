@@ -1,7 +1,7 @@
 export const template = (html: string, initialProps = {}, styles = ''): string => {
-    return (
-        `
-        // <!DOCTYPE html>
+  return (
+    `
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -11,7 +11,6 @@ export const template = (html: string, initialProps = {}, styles = ''): string =
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <title>Helix App</title>
   ${styles}
 </head>
@@ -23,6 +22,6 @@ export const template = (html: string, initialProps = {}, styles = ''): string =
 </body>
 
 </html>
-        `
-    )
+`
+  )
 }

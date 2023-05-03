@@ -19,5 +19,6 @@ react-router-dom
 
 yarn add -D @types/react
 
-
+npm i -D nodemon webpack-dev-middleware webpack-hot-middleware webpack-node-externals
   //sparkle 
+  

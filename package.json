@@ -14,13 +14,15 @@
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.9",
-    "web-vitals": "^2.1.4",
-    "webpack-hot-middleware": "^2.25.3"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "NODE_ENV=development webpack serve",
-    "build": "NODE_ENV=production webpack",
-    "start": "NODE_ENV=production webpack yarn run build && node server.js"
+    "build-client": "webpack --config webpack.config.client.js",
+    "build-server": "webpack --config webpack.config.server.js",
+    "build": "NODE_ENV=production npm run build-client && npm run build-server",
+    "build-dev": "NODE_ENV=development npm run build-client && NODE_ENV=development npm run build-server && node --inspect dist/index.js",
+    "dev": "nodemon --ext ts --exec \"npm run build-dev\"",
+    "start": "NODE_ENV=production npm run build && NODE_ENV=production node dist/index.js"
   },
   "eslintConfig": {
     "extends": [
@@ -46,9 +48,13 @@
     "@types/react": "^18.0.37",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.1",
+    "nodemon": "^2.0.22",
     "swc-loader": "^0.2.3",
     "webpack": "^5.79.0",
     "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.13.3"
+    "webpack-dev-middleware": "^6.0.2",
+    "webpack-dev-server": "^4.13.3",
+    "webpack-hot-middleware": "^2.25.3",
+    "webpack-node-externals": "^3.0.0"
   }
 }

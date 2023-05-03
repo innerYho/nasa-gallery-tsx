@@ -4,6 +4,7 @@ import { Galaxies } from '../pages/Galaxies';
 import { GlobalStyles } from '../GLobalStyle/GlobalStyle';
 import { Footer } from '../components/Footer';
 import { Menu } from '../components/Menu';
+import { Home } from '../pages/Home';
 
 
 export const App = (props) => {
@@ -13,7 +14,7 @@ export const App = (props) => {
       <GlobalStyles />
       <Menu />
       <Routes>
-        <Route index path='/' />
+        <Route index path='/' element={<Home />} />
         <Route path='/galaxias' element={<Galaxies />} />
         <Route path='/apollo' element={<Galaxies />} />
       </Routes>
